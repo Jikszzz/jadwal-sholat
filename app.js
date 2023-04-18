@@ -4,7 +4,7 @@ function prayerTimes(latitude, longitude) {
       latitude +
       "&longitude=" +
       longitude +
-      "&method=2"
+      "&method=4"
   )
     .then((response) => response.json())
     .then(function (response) {
@@ -32,7 +32,7 @@ function success(position) {
 }
 
 function error() {
-  alert("Posisi tidak dapat diakses");
+  prayerTimes("-6.200000", "106.816666");
 }
 
 function userLocation() {
